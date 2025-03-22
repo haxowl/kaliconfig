@@ -1,0 +1,68 @@
+{
+  "policies": {
+    "Certificates": {
+      "Install": ["/usr/local/share/ca-certificates/BurpSuiteCA.der"]
+    },
+    "DisableAppUpdate": true,
+    "DisplayBookmarksToolbar": true,
+    "EnableTrackingProtection": {
+      "Value": false,
+      "Locked": false,
+      "Cryptomining": false,
+      "Fingerprinting": false
+    },
+    "NoDefaultBookmarks": true,
+    "OverrideFirstRunPage": "",
+    "OverridePostUpdatePage": "",
+    "Homepage": {
+      "URL": "https://google.com",
+      "Locked": false,
+      "StartPage": "previous-session"
+    },
+    "SearchSuggestEnabled": false,
+    "DisableTelemetry": true,
+    "CaptivePortal": false,
+    "DNSOverHTTPS": {
+      "Enabled": false
+    },
+    "UserMessaging": {
+      "WhatsNew": false,
+      "ExtensionRecommendations": false,
+      "FeatureRecommendations": false,
+      "UrlbarInterventions": false,
+      "SkipOnboarding": true
+    },
+    "DisableFeedbackCommands": true,
+    "DisableFirefoxStudies": true,
+    "DisablePocket": true,
+    "DontCheckDefaultBrowser": true,
+    "FirefoxHome": {
+      "Search": true,
+      "TopSites": true,
+      "Highlights": false,
+      "Pocket": false,
+      "Snippets": false,
+      "Locked": false
+    },
+    "NetworkPrediction": false,
+    "PromptForDownloadLocation": true,
+    "Extensions": {
+      "Install": [
+        "https://addons.mozilla.org/firefox/downloads/latest/foxyproxy-standard/latest.xpi",
+        "https://addons.mozilla.org/firefox/downloads/latest/wappalyzer/latest.xpi",
+        "https://addons.mozilla.org/firefox/downloads/latest/darkreader/latest.xpi"
+        ]
+    },
+    "ExtensionSettings": {
+       "foxyproxy@eric.h.jung": {
+        "default_area": "navbar"
+      },
+      "wappalyzer@crunchlabz.com": {
+        "default_area": "navbar"
+      },
+      "addon@darkreader.org": {
+        "default_area": "navbar"
+      }
+    }
+  }
+}
