@@ -3,17 +3,10 @@
 - Side Channel mitigations not enabled
 - Fit all virtual machine memory into reserved host RAM
 
-## **Initial Network Configuration**
-- Using the terminal
-```
-sudo nmcli con mod 'Wired connection 1' ipv4.addresses 192.168.1.99/24 ipv4.gateway 192.168.1.1 ipv4.dns "1.1.1.1 8.8.8.8" ipv4.method manual
-sudo nmcli con up 'Wired connection 1'
-```
-
 ## **Basic Usage**
 - Using the terminal
 ```
-git clone https://oauth2:<GITHUB_TOKEN>@github.com/haxowl/kaliconfig.git
+git clone https://github.com/haxowl/kaliconfig.git
 cd kaliconfig
 chmod 777 install.sh
 ./install.sh
