@@ -1,3 +1,6 @@
+This is my personal config, nothing fancy and far from perfect but it works for me and it might work for you too.
+Credits: thegoodhackertv ippsec pimpmykali blacklanternsecurity
+
 ## **VMware Config**
 - Combination of 4 processors total
 - Side Channel mitigations not enabled

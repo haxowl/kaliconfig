@@ -99,10 +99,11 @@ sudo git clone https://github.com/Flangvik/SharpCollection /opt/sharpcollection
 
 # installing PEAS
 sudo mkdir /opt/PEAS
-sudo wget https://github.com/peass-ng/PEASS-ng/releases/latest/download/linpeas.sh -O /opt/PEAS/linpeas.sh
-sudo wget https://github.com/peass-ng/PEASS-ng/releases/latest/download/winPEAS.bat -O /opt/PEAS/winPEAS.bat
-sudo wget https://github.com/peass-ng/PEASS-ng/releases/latest/download/winPEASany.exe -O /opt/PEAS/winPEASany.exe
-sudo wget https://github.com/peass-ng/PEASS-ng/releases/latest/download/winPEASx64.exe -O /opt/PEAS/winPEASx64.exe
+sudo wget https://github.com/peass-ng/PEASS-ng/releases/latest/download/linpeas.sh -O /opt/peas/linpeas.sh
+sudo wget https://github.com/peass-ng/PEASS-ng/releases/latest/download/winPEAS.bat -O /opt/peas/winPEAS.bat
+sudo wget https://github.com/peass-ng/PEASS-ng/releases/latest/download/winPEASany.exe -O /opt/peas/winPEASany.exe
+sudo wget https://github.com/peass-ng/PEASS-ng/releases/latest/download/winPEASx64.exe -O /opt/peas/winPEASx64.exe
+sudo git clone https://github.com/carlospolop/cloudpeass /opt/cloudpeass
 
 # unzip rockyou
 sudo gunzip /usr/share/wordlists/rockyou.txt.gz
