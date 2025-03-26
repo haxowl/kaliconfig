@@ -44,7 +44,7 @@ sudo apt update -y
 sudo apt upgrade -y
 
 # install packages 
-sudo apt install -y feh scrot scrub xclip xsel neofetch wmname acpi imagemagick python3-pip lsd bpython open-vm-tools-desktop open-vm-tools pipx git python3-argcomplete netexec bat bloodhound gowitness eaphammer seclists bettercap jq kitty rlwrap font-manager cyberchef gobuster
+sudo apt install -y feh scrot scrub xclip xsel fastfetch wmname acpi imagemagick python3-pip lsd bpython open-vm-tools-desktop open-vm-tools pipx git python3-argcomplete netexec bat bloodhound gowitness eaphammer seclists bettercap jq kitty rlwrap font-manager cyberchef gobuster nuclei neovim
 
 # install ohmyzsh
 rm -rf ~/.oh-my-zsh
@@ -64,10 +64,10 @@ ln -s -f ~/.tmux/.tmux.conf ~/
 cp -v $RPATH/tmux.conf.local ~/.tmux.conf.local
 
 # nvim
-sudo wget https://github.com/neovim/neovim/releases/download/stable/nvim-linux64.tar.gz -O /tmp/nvim-linux64.tar.gz
-sudo tar xzvf /tmp/nvim-linux64.tar.gz --directory=/opt
-sudo ln -s /opt/nvim-linux64/bin/nvim /usr/bin/nvim
-sudo rm -f /opt/nvim-linux64.tar.gz
+# sudo wget https://github.com/neovim/neovim/releases/download/stable/nvim-linux64.tar.gz -O /tmp/nvim-linux64.tar.gz
+# sudo tar xzvf /tmp/nvim-linux64.tar.gz --directory=/opt
+# sudo ln -s /opt/nvim-linux64/bin/nvim /usr/bin/nvim
+# sudo rm -f /opt/nvim-linux64.tar.gz
 
 # install powerlevel10k
 git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/themes/powerlevel10k
@@ -116,15 +116,23 @@ sudo pip3 install python-libpcap
 sudo git clone https://github.com/lgandx/PCredz /opt/PCredz
 
 # install rustscan
-download_url=$(curl https://api.github.com/repos/RustScan/RustScan/releases/latest | sed 's/[()",{}]/ /g; s/ /\n/g' | grep "https.*releases/download.*deb")
-sudo wget $download_url -O /tmp/rustscan.deb
-sudo dpkg -i /tmp/rustscan.deb
-sudo rm /tmp/rustscan.deb
+# download_url=$(curl https://api.github.com/repos/RustScan/RustScan/releases/latest | sed 's/[()",{}]/ /g; s/ /\n/g' | grep "https.*releases/download.*deb")
+# sudo wget $download_url -O /tmp/rustscan.deb
+# sudo dpkg -i /tmp/rustscan.deb
+# sudo rm /tmp/rustscan.deb
 
 # install vscode
 sudo wget -O code-latest.deb 'https://code.visualstudio.com/sha/download?build=stable&os=linux-deb-x64'
-sudo apt install -y ./code-latest.deb
+sudo DEBIAN_FRONTEND=noninteractive apt install -y ./code-latest.deb
 sudo rm code-latest.deb
+
+# nuclei installing templates locally
+nuclei
+sudo nuclei
+
+# install loxs
+sudo git clone https://github.com/coffinxp/loxs.git /opt/loxs
+sudo pip3 install -r /opt/loxs/requirements.txt
 
 # generate ssh keys
 ssh-keygen -t rsa -f ~/.ssh/id_rsa -P ""
