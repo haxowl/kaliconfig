@@ -44,7 +44,7 @@ sudo apt update -y
 sudo apt upgrade -y
 
 # install packages 
-sudo apt install -y feh scrot scrub xclip xsel neofetch wmname acpi imagemagick python3-pip lsd bpython open-vm-tools-desktop open-vm-tools pipx git python3-argcomplete netexec bat bloodhound gowitness eaphammer seclists bettercap jq kitty rlwrap font-manager imwheel cyberchef gobuster
+sudo apt install -y feh scrot scrub xclip xsel neofetch wmname acpi imagemagick python3-pip lsd bpython open-vm-tools-desktop open-vm-tools pipx git python3-argcomplete netexec bat bloodhound gowitness eaphammer seclists bettercap jq kitty rlwrap font-manager cyberchef gobuster
 
 # install ohmyzsh
 rm -rf ~/.oh-my-zsh
@@ -76,7 +76,7 @@ cp -v $RPATH/p10k.zsh ~/.p10k.zsh
 
 # Change timezone
 # To list timezones run: timedatectl list-timezones
-sudo timedatectl set-timezone "America/La_Paz"
+sudo timedatectl set-timezone "Europe/Madrid"
 
 # install fonts
 mkdir /tmp/fonts
@@ -92,7 +92,7 @@ xfconf-query -c xfce4-power-manager -p /xfce4-power-manager/presentation-mode -s
 xfconf-query -c xfce4-power-manager -p /xfce4-power-manager/show-tray-icon -s true --create --type bool
 
 # Autohide taskbar
-xfconf-query -c xfce4-panel -p /panels/panel-1/autohide-behavior -s 2 --create --type int
+# xfconf-query -c xfce4-panel -p /panels/panel-1/autohide-behavior -s 2 --create --type int
 
 # installing sharpcollection
 sudo git clone https://github.com/Flangvik/SharpCollection /opt/sharpcollection
@@ -168,9 +168,6 @@ xfconf-query -c thunar -p /last-show-hidden -t bool -s true --create
 # window buttons config
 xfconf-query -c xfce4-panel -p /plugins/plugin-11/show-labels -t bool -s true --create
 xfconf-query -c xfce4-panel -p /plugins/plugin-11/grouping -t bool -s false --create
-
-# mousescroll fix
-sudo cp -v $RPATH/imwheel.conf /etc/X11/imwheel/startup.conf
 
 # burp config
 sudo mkdir /usr/local/lib/BurpSuite

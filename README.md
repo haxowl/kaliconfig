@@ -1,9 +1,9 @@
-This is my personal config, nothing fancy and far from perfect but it works for me and it might work for you too.
+### This is my personal config, nothing fancy and far from perfect but it works for me and it might work for you too.
+
 Credits: thegoodhackertv ippsec pimpmykali blacklanternsecurity
 
 ## **VMware Config**
 - Combination of 4 processors total
-- Side Channel mitigations not enabled
 - Fit all virtual machine memory into reserved host RAM
 
 ## **Basic Usage**
@@ -39,10 +39,6 @@ http://127.0.0.1:8080?color=0000ff&title=BURP&enabed=true
 
 ## **ToDo**
 - xfconf clock-19 make show time the date, time font bold
-- xfconf panel1 never hide, background solid black
-- disable firefox bookmark bar
-- Ask whether to open or save files, pdf etc firefox
 - copy idorfuzz.txt to seclists/fuzzing
-- remove imwheel
 - install pspy, make a single folder with all needed binaries https://github.com/itm4n/PrivescCheck
 - p10k remove right, move time to left

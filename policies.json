@@ -50,18 +50,32 @@
       "Install": [
         "https://addons.mozilla.org/firefox/downloads/latest/foxyproxy-standard/latest.xpi",
         "https://addons.mozilla.org/firefox/downloads/latest/wappalyzer/latest.xpi",
-        "https://addons.mozilla.org/firefox/downloads/latest/darkreader/latest.xpi"
+        "https://addons.mozilla.org/firefox/downloads/latest/darkreader/latest.xpi",
+        "https://addons.mozilla.org/firefox/downloads/latest/firefox-hackbar/latest.xpi",
+        "https://addons.mozilla.org/firefox/downloads/latest/endpointer/latest.xpi",
+        "https://addons.mozilla.org/firefox/downloads/latest/cookie-editor/latest.xpi"
         ]
     },
     "ExtensionSettings": {
        "foxyproxy@eric.h.jung": {
-        "default_area": "navbar"
+        "default_area": "navbar",
+        "private_browsing": true
       },
       "wappalyzer@crunchlabz.com": {
-        "default_area": "navbar"
+        "default_area": "navbar",
+        "private_browsing": true
+      },
+      "endPointer@interloper-security-group.com": {
+        "default_area": "navbar",
+        "private_browsing": true
+      },
+      "cookie-editor@cookie-editor.com": {
+        "default_area": "navbar",
+        "private_browsing": true
       },
       "addon@darkreader.org": {
-        "default_area": "navbar"
+        "default_area": "navbar",
+        "private_browsing": true
       }
     }
   }
