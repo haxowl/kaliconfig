@@ -111,8 +111,8 @@ sudo gunzip /usr/share/wordlists/rockyou.txt.gz
 # installing PCredz
 sudo apt install -y python3-pip 
 sudo apt-get install -y libpcap-dev 
-sudo pip3 install Cython 
-sudo pip3 install python-libpcap
+sudo pipx install Cython 
+sudo pipx install python-libpcap
 sudo git clone https://github.com/lgandx/PCredz /opt/PCredz
 
 # install rustscan
@@ -132,7 +132,7 @@ sudo nuclei
 
 # install loxs
 sudo git clone https://github.com/coffinxp/loxs.git /opt/loxs
-sudo pip3 install -r /opt/loxs/requirements.txt
+sudo pipx install -r /opt/loxs/requirements.txt
 
 # generate ssh keys
 ssh-keygen -t rsa -f ~/.ssh/id_rsa -P ""
