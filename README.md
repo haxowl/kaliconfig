@@ -38,7 +38,5 @@ http://127.0.0.1:8080?color=0000ff&title=BURP&enabed=true
 - Using CAT to open one of the tmux logging files creates 40k lines of text
 
 ## **ToDo**
-- xfconf clock-19 make show time the date, time font bold
-- copy idorfuzz.txt to seclists/fuzzing
-- install pspy, make a single folder with all needed binaries https://github.com/itm4n/PrivescCheck
+- install pspy, make a single folder with all needed binaries https://github.com/itm4n/PrivescCheck, review PEAS
 - p10k remove right, move time to left

@@ -157,7 +157,7 @@ mkdir ~/tmuxlogs
 echo "tmux pipe-pane -o 'cat >>~/tmuxlogs/tmux.#H.#S.#I.#P_%Y.%m.%d_%H.%M.%S.log'" >> ~/tmux_start_logging.sh
 chmod 777 ~/tmux_start_logging.sh
 
-# add and reorder taskbar icons
+# add and reorder taskbar icons, clock stuff
 xfconf-query -c xfce4-panel -p /plugins/plugin-5/items -t string -a -s 'kali-burpsuite.desktop' --create
 xfconf-query -c xfce4-panel -p /plugins/plugin-6/items -t string -a -s 'xfce-text-editor.desktop' --create
 xfconf-query -c xfce4-panel -p /plugins/plugin-7/items -t string -a -s 'firefox-esr.desktop' --create
@@ -166,6 +166,7 @@ xfconf-query -c xfce4-panel -p /plugins/plugin-23/items -t string -a -s 'code.de
 xfce4-panel --add=launcher
 xfconf-query -c xfce4-panel -p /plugins/plugin-24/items -t string -a -s 'kitty.desktop' --create
 xfconf-query -c xfce4-panel -p /panels/panel-1/plugin-ids -a -t int -s 1 -t int -s 2 -t int -s 3 -t int -s 4 -t int -s 5 -t int -s 6 -t int -s 7 -t int -s 23 -t int -s 24 -t int -s 8 -t int -s 9 -t int -s 10 -t int -s 11 -t int -s 12 -t int -s 13 -t int -s 14 -t int -s 15 -t int -s 16 -t int -s 17 -t int -s 18 -t int -s 19 -t int -s 20 -t int -s 21 -t int -s 22
+xfconf-query -c xfce4-panel -p /plugins/plugin-19/digital-layout -t int -s 1
 
 # add favorites to start menu
 xfconf-query -c xfce4-panel -p /plugins/plugin-1/favorites -a -n -t string -s 'kitty.desktop' -t string -s 'firefox-esr.desktop' -t string -s 'code.desktop' -t string -s 'kali-burpsuite.desktop' -t string -s 'xfce-text-editor.desktop' -t string -s 'xfce4-terminal-emulator.desktop' -t string -s 'root-terminal.desktop' -t string -s 'xfce4-file-manager.desktop' -t string -s 'exploit-database.desktop' -t string -s 'vulnhub.desktop'
@@ -184,6 +185,9 @@ sudo wget https://repo1.maven.org/maven2/org/python/jython-standalone/2.7.3/jyth
 sudo chmod 0644 /usr/local/lib/BurpSuite/jruby-complete.jar
 sudo chmod 0644 /usr/local/lib/BurpSuite/jython-standalone.jar
 sudo cp -v $RPATH/UserConfigCommunity.json ~/.BurpSuite/UserConfigCommunity.json
+
+# copy files
+cp -v $RPATH/idorfuzz.txt /usr/share/seclists/idorfuzz.txt
 
 # update locate db
 sudo updatedb
