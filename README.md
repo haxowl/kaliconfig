@@ -1,10 +1,7 @@
-### This is my personal config, nothing fancy and far from perfect but it works for me and it might work for you too.
+### This is my personal config, nothing fancy and far from perfect but it works for me and it might work for you too. 
+### Tested on Kali 2025.1a
 
 Credits: thegoodhackertv ippsec pimpmykali blacklanternsecurity
-
-## **VMware Config**
-- Combination of 4 processors total
-- Fit all virtual machine memory into reserved host RAM
 
 ## **Basic Usage**
 - Using the terminal
@@ -31,7 +28,6 @@ sudo neo4j console
 ```
 http://127.0.0.1:8080?color=0000ff&title=BURP&enabed=true
 ```
-
 
 ## **Known Issues:**
 - Selected text is automatically attached to clipboard when copying/pasting from guestVM to host (text editors, terminal, etc). Might be intended X11 behaviour.
