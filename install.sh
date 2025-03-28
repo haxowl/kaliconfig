@@ -80,9 +80,9 @@ sudo timedatectl set-timezone "Europe/Madrid"
 
 # install fonts
 mkdir /tmp/fonts
-wget https://github.com/ryanoasis/nerd-fonts/releases/download/v3.2.1/Hack.zip -O /tmp/fonts/Hack.zip
+wget https://github.com/ryanoasis/nerd-fonts/releases/download/v3.3.0/Hack.zip -O /tmp/fonts/Hack.zip
 unzip /tmp/fonts/Hack.zip -d /tmp/fonts
-font-manager -i /tmp/fonts/*.ttf
+sudo font-manager -i /tmp/fonts/*.ttf
 
 # initialize MSFDB
 sudo msfdb init
@@ -97,12 +97,22 @@ xfconf-query -c xfce4-power-manager -p /xfce4-power-manager/show-tray-icon -s tr
 # installing sharpcollection
 sudo git clone https://github.com/Flangvik/SharpCollection /opt/sharpcollection
 
-# installing PEAS
-sudo mkdir /opt/PEAS
-sudo wget https://github.com/peass-ng/PEASS-ng/releases/latest/download/linpeas.sh -O /opt/peas/linpeas.sh
-sudo wget https://github.com/peass-ng/PEASS-ng/releases/latest/download/winPEAS.bat -O /opt/peas/winPEAS.bat
-sudo wget https://github.com/peass-ng/PEASS-ng/releases/latest/download/winPEASany.exe -O /opt/peas/winPEASany.exe
-sudo wget https://github.com/peass-ng/PEASS-ng/releases/latest/download/winPEASx64.exe -O /opt/peas/winPEASx64.exe
+# installing binaries and scripts, PEAS
+sudo mkdir /opt/misc
+sudo wget https://github.com/peass-ng/PEASS-ng/releases/latest/download/linpeas.sh -O /opt/misc/linpeas.sh
+sudo wget https://github.com/peass-ng/PEASS-ng/releases/latest/download/winPEAS.bat -O /opt/misc/winPEAS.bat
+sudo wget https://github.com/peass-ng/PEASS-ng/releases/latest/download/winPEASany.exe -O /opt/misc/winPEASany.exe
+sudo wget https://github.com/peass-ng/PEASS-ng/releases/latest/download/winPEASx64.exe -O /opt/misc/winPEASx64.exe
+sudo wget https://raw.githubusercontent.com/itm4n/PrivescCheck/refs/heads/master/PrivescCheck.ps1 -O /opt/misc/PrivescCheck.ps1
+sudo wget https://github.com/DominicBreuker/pspy/releases/download/v1.2.1/pspy32 -O /opt/misc/pspy32
+sudo wget https://github.com/DominicBreuker/pspy/releases/download/v1.2.1/pspy32 -O /opt/misc/pspy64
+
+sudo wget https://github.com/jpillora/chisel/releases/download/v1.10.1/chisel_1.10.1_linux_amd64.gz -O /opt/misc/chisel_1.10.1_linux_amd64.gz
+sudo wget https://github.com/jpillora/chisel/releases/download/v1.10.1/chisel_1.10.1_windows_amd64.gz -O /opt/misc/chisel_1.10.1_windows_amd64.gz
+sudo gunzip /opt/misc/chisel_1.10.1_linux_amd64.gz
+sudo gunzip /opt/misc/chisel_1.10.1_windows_amd64.gz
+sudo chmod 777 /opt/misc/chisel_1.10.1_linux_amd64
+
 sudo git clone https://github.com/carlospolop/cloudpeass /opt/cloudpeass
 
 # unzip rockyou
