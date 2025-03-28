@@ -268,7 +268,8 @@ tmux_conf_theme_right_separator_sub='\uE0B3'  #   PowerlineSymbols.otf font, see
 #     - #{username}
 #     - #{username_ssh}
 tmux_conf_theme_status_left=" #{tmux_mode_indicator} "
-tmux_conf_theme_status_right=" #{net_speed} | W#I:P#P | %d %b , %R | #{mouse}#{pairing}#{synchronized}"
+# tmux_conf_theme_status_right=" #{net_speed} | W#I:P#P | %d %b , %R | #{mouse}#{pairing}#{synchronized}"
+tmux_conf_theme_status_right=" W#I:P#P | #{mouse}#{pairing}#{synchronized}"
 
 # status left style
 tmux_conf_theme_status_left_fg="$tmux_conf_theme_colour_1
@@ -276,8 +277,10 @@ tmux_conf_theme_status_left_bg="$tmux_conf_theme_colour_1
 tmux_conf_theme_status_left_attr="none,none,none"
 
 # status right style
-tmux_conf_theme_status_right_fg="$tmux_conf_theme_colour_11,$tmux_conf_theme_colour_7,$tmux_conf_theme_colour_4,$tmux_conf_theme_colour_1"
-tmux_conf_theme_status_right_bg="$tmux_conf_theme_colour_1,$tmux_conf_theme_colour_1,$tmux_conf_theme_colour_1,$tmux_conf_theme_colour_1"
+# tmux_conf_theme_status_right_fg="$tmux_conf_theme_colour_11,$tmux_conf_theme_colour_7,$tmux_conf_theme_colour_4,$tmux_conf_theme_colour_1"
+# tmux_conf_theme_status_right_bg="$tmux_conf_theme_colour_1,$tmux_conf_theme_colour_1,$tmux_conf_theme_colour_1,$tmux_conf_theme_colour_1"
+tmux_conf_theme_status_right_fg="$tmux_conf_theme_colour_4,$tmux_conf_theme_colour_1"
+tmux_conf_theme_status_right_bg="$tmux_conf_theme_colour_1,$tmux_conf_theme_colour_1"
 tmux_conf_theme_status_right_attr="bold,none,bold"
 
 # pairing indicator

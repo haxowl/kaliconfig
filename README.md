@@ -38,4 +38,4 @@ http://127.0.0.1:8080?color=0000ff&title=BURP&enabed=true
 - Using CAT to open one of the tmux logging files creates 40k lines of text
 
 ## **ToDo**
-- p10k remove right, move time to left
+-
