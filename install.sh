@@ -117,7 +117,8 @@ sudo gunzip /opt/misc/chisel_1.10.1_windows_amd64.gz
 sudo chmod 777 /opt/misc/chisel_1.10.1_linux_amd64
 
 sudo wget https://download.sysinternals.com/files/SysinternalsSuite.zip -O /opt/SysinternalsSuite.zip
-sudo gunzip /opt/SysinternalsSuite.zip
+sudo unzip /opt/SysinternalsSuite.zip -d /opt/SysinternalsSuite
+sudo rm /opt/SysinternalsSuite.zip
 
 sudo git clone https://github.com/carlospolop/cloudpeass /opt/cloudpeass
 
