@@ -106,12 +106,18 @@ sudo wget https://github.com/peass-ng/PEASS-ng/releases/latest/download/winPEASx
 sudo wget https://raw.githubusercontent.com/itm4n/PrivescCheck/refs/heads/master/PrivescCheck.ps1 -O /opt/misc/PrivescCheck.ps1
 sudo wget https://github.com/DominicBreuker/pspy/releases/download/v1.2.1/pspy32 -O /opt/misc/pspy32
 sudo wget https://github.com/DominicBreuker/pspy/releases/download/v1.2.1/pspy32 -O /opt/misc/pspy64
+sudo wget https://raw.githubusercontent.com/gladiatx0r/Powerless/refs/heads/master/Powerless.bat -O /opt/misc/Powerless.bat
+sudo wget https://raw.githubusercontent.com/The-Z-Labs/linux-exploit-suggester/refs/heads/master/linux-exploit-suggester.sh -O /opt/misc/linux-exploit-suggester.sh
+sudo wget https://github.com/ohpe/juicy-potato/releases/download/v0.1/JuicyPotato.exe -O /opt/misc/JuicyPotato.exe
 
 sudo wget https://github.com/jpillora/chisel/releases/download/v1.10.1/chisel_1.10.1_linux_amd64.gz -O /opt/misc/chisel_1.10.1_linux_amd64.gz
 sudo wget https://github.com/jpillora/chisel/releases/download/v1.10.1/chisel_1.10.1_windows_amd64.gz -O /opt/misc/chisel_1.10.1_windows_amd64.gz
 sudo gunzip /opt/misc/chisel_1.10.1_linux_amd64.gz
 sudo gunzip /opt/misc/chisel_1.10.1_windows_amd64.gz
 sudo chmod 777 /opt/misc/chisel_1.10.1_linux_amd64
+
+sudo wget https://download.sysinternals.com/files/SysinternalsSuite.zip -O /opt/SysinternalsSuite.zip
+sudo gunzip /opt/misc/SysinternalsSuite.zip -d /opt/SysinternalsSuite
 
 sudo git clone https://github.com/carlospolop/cloudpeass /opt/cloudpeass
 
