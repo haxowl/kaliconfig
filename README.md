@@ -29,9 +29,20 @@ sudo neo4j console
 http://127.0.0.1:8080?color=0000ff&title=BURP&enabed=true
 ```
 
+**Subfinder** 
+- Add sources to:
+```
+.config/subfinder/provider-config.yaml
+```
+
 ## **Known Issues:**
 - Selected text is automatically attached to clipboard when copying/pasting from guestVM to host (text editors, terminal, etc). Might be intended X11 behaviour.
 - Using CAT to open one of the tmux logging files creates 40k lines of text
 
 ## **ToDo**
--
+- jython
+- burp extensions: 
+content type converter
+JS Link Finder
+param miner
+backlash powered scanner
