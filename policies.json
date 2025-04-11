@@ -53,7 +53,8 @@
         "https://addons.mozilla.org/firefox/downloads/latest/darkreader/latest.xpi",
         "https://addons.mozilla.org/firefox/downloads/latest/firefox-hackbar/latest.xpi",
         "https://addons.mozilla.org/firefox/downloads/latest/endpointer/latest.xpi",
-        "https://addons.mozilla.org/firefox/downloads/latest/cookie-editor/latest.xpi"
+        "https://addons.mozilla.org/firefox/downloads/latest/cookie-editor/latest.xpi",
+        "https://addons.mozilla.org/firefox/downloads/latest/pwnfox/latest.xpi"
         ]
     },
     "ExtensionSettings": {
@@ -74,6 +75,10 @@
         "private_browsing": true
       },
       "addon@darkreader.org": {
+        "default_area": "navbar",
+        "private_browsing": true
+      },
+      "PwnFox@bi.tk": {
         "default_area": "navbar",
         "private_browsing": true
       }
