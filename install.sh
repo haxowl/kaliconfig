@@ -43,6 +43,9 @@ RPATH=`pwd`
 sudo apt update -y
 sudo apt upgrade -y
 
+# uninstall unnecessary packages
+sudo apt remove -y python3-httpx
+
 # install packages 
 sudo apt install -y feh scrot scrub xclip xsel fastfetch wmname acpi imagemagick python3-pip lsd bpython open-vm-tools-desktop open-vm-tools pipx git python3-argcomplete netexec bat bloodhound gowitness eaphammer seclists bettercap jq kitty rlwrap font-manager cyberchef gobuster nuclei neovim golang subfinder
 
@@ -150,6 +153,11 @@ sudo nuclei
 # install loxs
 sudo git clone https://github.com/coffinxp/loxs.git /opt/loxs
 sudo pip3 install -r /opt/loxs/requirements.txt --break-system-packages
+
+# install httpx project discovery
+go install -v github.com/projectdiscovery/httpx/cmd/httpx@latest
+echo export PATH=$PATH:$HOME/go/bin >> $HOME/.zshrc
+source $HOME/.zshrc
 
 # generate ssh keys
 ssh-keygen -t rsa -f ~/.ssh/id_rsa -P ""

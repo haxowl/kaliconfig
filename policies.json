@@ -54,7 +54,8 @@
         "https://addons.mozilla.org/firefox/downloads/latest/firefox-hackbar/latest.xpi",
         "https://addons.mozilla.org/firefox/downloads/latest/endpointer/latest.xpi",
         "https://addons.mozilla.org/firefox/downloads/latest/cookie-editor/latest.xpi",
-        "https://addons.mozilla.org/firefox/downloads/latest/pwnfox/latest.xpi"
+        "https://addons.mozilla.org/firefox/downloads/latest/pwnfox/latest.xpi",
+        "https://addons.mozilla.org/firefox/downloads/latest/lazy-payloads/latest.xpi"
         ]
     },
     "ExtensionSettings": {
