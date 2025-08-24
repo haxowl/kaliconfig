@@ -18,6 +18,7 @@ chmod 777 install.sh
 ```
 bloodhound-setup
 ```
+/usr/bin/bloodhound
 
 **Foxyproxy** 
 - Navigate to: Import Proxy List
@@ -41,11 +42,10 @@ sudo nmcli con up 'Wired connection 1'
 ## **Known Issues:**
 - Selected text is automatically attached to clipboard when copying/pasting from guestVM to host (text editors, terminal, etc). Might be intended X11 behaviour.
 - Using CAT to open one of the tmux logging files creates 40k lines of text
+- To use Burp and Bloodhound at the same time, given they share port 8080, Burp's listening port must be manually modified each time a new project is created.
 
 ## **ToDo**
 - burp pro extensions: 
 JS Link Finder
 backlash powered scanner
 http request smuggler
-
-test locate

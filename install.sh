@@ -162,6 +162,14 @@ source $HOME/.zshrc
 # generate ssh keys
 ssh-keygen -t rsa -f ~/.ssh/id_rsa -P ""
 
+# burp config
+sudo mkdir /usr/local/lib/BurpSuite
+sudo wget https://repo1.maven.org/maven2/org/jruby/jruby-complete/9.4.0.0/jruby-complete-9.4.0.0.jar -O /usr/local/lib/BurpSuite/jruby-complete.jar
+sudo wget https://repo1.maven.org/maven2/org/python/jython-standalone/2.7.3/jython-standalone-2.7.3.jar -O /usr/local/lib/BurpSuite/jython-standalone.jar
+sudo chmod 0644 /usr/local/lib/BurpSuite/jruby-complete.jar
+sudo chmod 0644 /usr/local/lib/BurpSuite/jython-standalone.jar
+sudo cp -v $RPATH/UserConfigCommunity.json ~/.BurpSuite/UserConfigCommunity.json
+
 # generate burp cert, might need to increase timeout and sleep if using a low spec computer
 /bin/bash -c "timeout 45 /usr/lib/jvm/java-21-openjdk-amd64/bin/java -Djava.awt.headless=true -jar /usr/share/burpsuite/burpsuite.jar < <(echo y) &" 
 sleep 30
@@ -176,6 +184,7 @@ sudo cp -v $RPATH/policies.json /usr/share/firefox-esr/distribution/policies.jso
 # install terminal config
 mkdir ~/.config/kitty
 cp -v $RPATH/kitty.conf ~/.config/kitty/kitty.conf
+cp -v $RPATH/qterminal.ini ~/.config/qterminal.org/qterminal.ini
 
 # enable tmux logging
 mkdir ~/tmuxlogs
@@ -202,14 +211,6 @@ xfconf-query -c thunar -p /last-show-hidden -t bool -s true --create
 # window buttons config
 xfconf-query -c xfce4-panel -p /plugins/plugin-11/show-labels -t bool -s true --create
 xfconf-query -c xfce4-panel -p /plugins/plugin-11/grouping -t bool -s false --create
-
-# burp config
-sudo mkdir /usr/local/lib/BurpSuite
-sudo wget https://repo1.maven.org/maven2/org/jruby/jruby-complete/9.4.0.0/jruby-complete-9.4.0.0.jar -O /usr/local/lib/BurpSuite/jruby-complete.jar
-sudo wget https://repo1.maven.org/maven2/org/python/jython-standalone/2.7.3/jython-standalone-2.7.3.jar -O /usr/local/lib/BurpSuite/jython-standalone.jar
-sudo chmod 0644 /usr/local/lib/BurpSuite/jruby-complete.jar
-sudo chmod 0644 /usr/local/lib/BurpSuite/jython-standalone.jar
-sudo cp -v $RPATH/UserConfigCommunity.json ~/.BurpSuite/UserConfigCommunity.json
 
 # copy files
 cp -v $RPATH/idorfuzz.txt /usr/share/seclists/idorfuzz.txt
