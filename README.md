@@ -18,7 +18,6 @@ chmod 777 install.sh
 ```
 bloodhound-setup
 ```
-/usr/bin/bloodhound
 
 **Foxyproxy** 
 - Navigate to: Import Proxy List
