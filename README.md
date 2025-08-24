@@ -40,8 +40,9 @@ sudo nmcli con up 'Wired connection 1'
 
 ## **Known Issues:**
 - Selected text is automatically attached to clipboard when copying/pasting from guestVM to host (text editors, terminal, etc). Might be intended X11 behaviour.
-- Using CAT to open one of the tmux logging files creates 40k lines of text
+- Using CAT to open one of the tmux logging files creates 40k lines of text.
 - To use Burp and Bloodhound at the same time, given they share port 8080, Burp's listening port must be manually modified each time a new project is created.
+- Burp userconfig and extensions not working properly.
 
 ## **ToDo**
 - burp pro extensions: 
