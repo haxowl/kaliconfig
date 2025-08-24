@@ -1,5 +1,5 @@
 ### This is my personal config, nothing fancy and far from perfect but it works for me and it might work for you too. 
-### Tested on Kali 2025.1a
+### Tested on Kali 2025.2
 
 Credits: thegoodhackertv ippsec pimpmykali blacklanternsecurity
 
@@ -13,14 +13,11 @@ chmod 777 install.sh
 ```
 
 ## **Additional Config**
-**Bloodhound**
+**Bloodhound Community Edition**
 - Using the terminal
 ```
-sudo neo4j console
+bloodhound-setup
 ```
-- Go to: http://localhost:7474/
-- Log in with the following credentials: neo4j:neo4j
-- Follow the config wizard
 
 **Foxyproxy** 
 - Navigate to: Import Proxy List
@@ -47,6 +44,7 @@ sudo nmcli con up 'Wired connection 1'
 
 ## **ToDo**
 - jython
+- bloodyad
 - burp extensions: 
 content type converter
 JS Link Finder
