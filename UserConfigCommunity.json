@@ -45,7 +45,88 @@
             }
         },
         "extender":{
-            "extensions":[],
+            "extensions":[
+                {
+                    "bapp_serial_version":2,
+                    "bapp_uuid":"d5648b2788324b40a586a96ba8fca2bf",
+                    "errors":"ui",
+                    "extension_file":"bapps/d5648b2788324b40a586a96ba8fca2bf/target/burp-suite-paste-curl-1.0-SNAPSHOT.jar",
+                    "extension_type":"java",
+                    "loaded":true,
+                    "name":"Paste cURL to Repeater",
+                    "output":"ui"
+                },
+                {
+                    "bapp_serial_version":34,
+                    "bapp_uuid":"17d2949a985c4b7ca092728dba871943",
+                    "errors":"ui",
+                    "extension_file":"bapps/17d2949a985c4b7ca092728dba871943/build/libs/param-miner-all.jar",
+                    "extension_type":"java",
+                    "loaded":true,
+                    "name":"Param Miner",
+                    "output":"ui"
+                },
+                {
+                    "bapp_serial_version":20,
+                    "bapp_uuid":"26aaa5ded2f74beea19e2ed8345a93dd",
+                    "errors":"ui",
+                    "extension_file":"bapps/26aaa5ded2f74beea19e2ed8345a93dd/build/libs/jwt-editor-2.6.jar",
+                    "extension_type":"java",
+                    "loaded":true,
+                    "name":"JWT Editor",
+                    "output":"ui"
+                },
+                {
+                    "bapp_serial_version":61,
+                    "bapp_uuid":"9abaa233088242e8be252cd4ff534988",
+                    "errors":"ui",
+                    "extension_file":"bapps/9abaa233088242e8be252cd4ff534988/turbo-intruder.jar",
+                    "extension_type":"java",
+                    "loaded":true,
+                    "name":"Turbo Intruder",
+                    "output":"ui"
+                },
+                {
+                    "bapp_serial_version":27,
+                    "bapp_uuid":"f9bbac8c4acf4aefa4d7dc92a991af2f",
+                    "errors":"ui",
+                    "extension_file":"bapps/f9bbac8c4acf4aefa4d7dc92a991af2f/Autorize.py",
+                    "extension_type":"python",
+                    "loaded":true,
+                    "name":"Autorize",
+                    "output":"ui"
+                },
+                {
+                    "bapp_serial_version":4,
+                    "bapp_uuid":"db57ecbe2cb7446292a94aa6181c9278",
+                    "errors":"ui",
+                    "extension_file":"bapps/db57ecbe2cb7446292a94aa6181c9278/build/libs/content-type-converter-all.jar",
+                    "extension_type":"java",
+                    "loaded":true,
+                    "name":"Content Type Converter",
+                    "output":"ui"
+                },
+                {
+                    "bapp_serial_version":22,
+                    "bapp_uuid":"296e9a0730384be4b2fffef7b4e19b1f",
+                    "errors":"ui",
+                    "extension_file":"bapps/296e9a0730384be4b2fffef7b4e19b1f/InQL.jar",
+                    "extension_type":"java",
+                    "loaded":true,
+                    "name":"InQL - GraphQL Scanner",
+                    "output":"ui"
+                },
+                {
+                    "bapp_serial_version":52,
+                    "bapp_uuid":"65033cbd2c344fbabe57ac060b5dd100",
+                    "errors":"ui",
+                    "extension_file":"bapps/65033cbd2c344fbabe57ac060b5dd100/releases/hackvertor-all.jar",
+                    "extension_type":"java",
+                    "loaded":true,
+                    "name":"Hackvertor",
+                    "output":"ui"
+                }
+            ],
             "java":{
                 "folder_for_loading_library_jar_files":""
             },

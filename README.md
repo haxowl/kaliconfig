@@ -43,11 +43,9 @@ sudo nmcli con up 'Wired connection 1'
 - Using CAT to open one of the tmux logging files creates 40k lines of text
 
 ## **ToDo**
-- jython
-- bloodyad
-- burp extensions: 
-content type converter
+- burp pro extensions: 
 JS Link Finder
-param miner
 backlash powered scanner
-Paste curl to repeater
+http request smuggler
+
+test locate
