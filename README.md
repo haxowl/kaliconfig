@@ -43,6 +43,7 @@ sudo nmcli con up 'Wired connection 1'
 - Using CAT to open one of the tmux logging files creates 40k lines of text.
 - To use Burp and Bloodhound at the same time, given they share port 8080, Burp's listening port must be manually modified each time a new project is created.
 - Burp userconfig and extensions not working properly.
+- If the cursor is hidden using VMWare Workstation, with the Kali VM powered off, go to VM -> Manage -> Change Hardware Compatibility -> Alter -> Change it to VMWare 17.0x
 
 ## **ToDo**
 - burp pro extensions: 

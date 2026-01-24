@@ -47,7 +47,7 @@ sudo apt upgrade -y
 sudo apt remove -y python3-httpx
 
 # install packages 
-sudo apt install -y feh scrot scrub xclip xsel fastfetch wmname acpi imagemagick python3-pip lsd bpython open-vm-tools-desktop open-vm-tools pipx git python3-argcomplete netexec bat bloodhound gowitness eaphammer seclists bettercap jq kitty rlwrap font-manager cyberchef gobuster nuclei neovim golang subfinder docker.io docker-compose bloodyad
+sudo apt install -y python3 python3-pip feh scrot scrub xclip xsel fastfetch wmname acpi imagemagick python3-pip lsd bpython open-vm-tools-desktop open-vm-tools pipx git python3-argcomplete netexec bat bloodhound gowitness eaphammer seclists bettercap jq kitty rlwrap font-manager cyberchef gobuster nuclei neovim golang subfinder docker.io docker-compose bloodyad certipy-ad feroxbuster oscanner redis-tools sipvicious tnscmd10g libpcap-dev sshpass sliver nishang ssh-audit dnsx airgeddon wifiphiser
 
 # install ohmyzsh
 rm -rf ~/.oh-my-zsh
@@ -65,12 +65,6 @@ rm -rf ~/.tmux
 git clone https://github.com/gpakosz/.tmux.git ~/.tmux
 ln -s -f ~/.tmux/.tmux.conf ~/
 cp -v $RPATH/tmux.conf.local ~/.tmux.conf.local
-
-# nvim
-# sudo wget https://github.com/neovim/neovim/releases/download/stable/nvim-linux64.tar.gz -O /tmp/nvim-linux64.tar.gz
-# sudo tar xzvf /tmp/nvim-linux64.tar.gz --directory=/opt
-# sudo ln -s /opt/nvim-linux64/bin/nvim /usr/bin/nvim
-# sudo rm -f /opt/nvim-linux64.tar.gz
 
 # install powerlevel10k
 git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/themes/powerlevel10k
@@ -111,35 +105,33 @@ sudo wget https://github.com/DominicBreuker/pspy/releases/download/v1.2.1/pspy32
 sudo wget https://github.com/DominicBreuker/pspy/releases/download/v1.2.1/pspy32 -O /opt/misc/pspy64
 sudo wget https://raw.githubusercontent.com/gladiatx0r/Powerless/refs/heads/master/Powerless.bat -O /opt/misc/Powerless.bat
 sudo wget https://raw.githubusercontent.com/The-Z-Labs/linux-exploit-suggester/refs/heads/master/linux-exploit-suggester.sh -O /opt/misc/linux-exploit-suggester.sh
-sudo wget https://github.com/ohpe/juicy-potato/releases/download/v0.1/JuicyPotato.exe -O /opt/misc/JuicyPotato.exe
+sudo git clone https://github.com/carlospolop/cloudpeass /opt/cloudpeass
 
-sudo wget https://github.com/jpillora/chisel/releases/download/v1.10.1/chisel_1.10.1_linux_amd64.gz -O /opt/misc/chisel_1.10.1_linux_amd64.gz
+sudo wget https://github.com/ohpe/juicy-potato/releases/download/v0.1/JuicyPotato.exe -O /opt/misc/JuicyPotato.exe
+sudo wget https://raw.githubusercontent.com/topotam/PetitPotam/refs/heads/main/PetitPotam.py -O /opt/misc/PetitPotam.py
+sudo wget https://github.com/topotam/PetitPotam/raw/refs/heads/main/PetitPotam.exe -O /opt/misc/PetitPotam.exe
+sudo wget https://raw.githubusercontent.com/maaaaz/nmaptocsv/refs/heads/master/nmaptocsv.py -O /opt/misc/nmaptocsv.py
+
+sudo wget https://github.com/jpillora/chisel/releases/download/v1.11.3/chisel_1.11.3_linux_amd64.gz -O /opt/misc/chisel_1.11.3_linux_amd64.gz
 sudo wget https://github.com/jpillora/chisel/releases/download/v1.10.1/chisel_1.10.1_windows_amd64.gz -O /opt/misc/chisel_1.10.1_windows_amd64.gz
-sudo gunzip /opt/misc/chisel_1.10.1_linux_amd64.gz
+sudo gunzip /opt/misc/chisel_1.11.3_linux_amd64.gz
 sudo gunzip /opt/misc/chisel_1.10.1_windows_amd64.gz
-sudo chmod 777 /opt/misc/chisel_1.10.1_linux_amd64
+sudo chmod 777 /opt/misc/chisel_1.11.3_linux_amd64
 
 sudo wget https://download.sysinternals.com/files/SysinternalsSuite.zip -O /opt/SysinternalsSuite.zip
 sudo unzip /opt/SysinternalsSuite.zip -d /opt/SysinternalsSuite
 sudo rm /opt/SysinternalsSuite.zip
 
-sudo git clone https://github.com/carlospolop/cloudpeass /opt/cloudpeass
+sudo wget https://github.com/ropnop/kerbrute/releases/download/v1.0.3/kerbrute_linux_amd64 -O /opt/misc/kerbrute
+sudo chmod 777 /opt/misc/kerbrute
 
-# unzip rockyou
-sudo gunzip /usr/share/wordlists/rockyou.txt.gz
+# installing autorecon
+pipx install git+https://github.com/Tib3rius/AutoRecon.git
 
 # installing PCredz
-sudo apt install -y python3-pip 
-sudo apt-get install -y libpcap-dev 
 sudo pip3 install Cython --break-system-packages
 sudo pip3 install python-libpcap --break-system-packages
 sudo git clone https://github.com/lgandx/PCredz /opt/PCredz
-
-# install rustscan
-# download_url=$(curl https://api.github.com/repos/RustScan/RustScan/releases/latest | sed 's/[()",{}]/ /g; s/ /\n/g' | grep "https.*releases/download.*deb")
-# sudo wget $download_url -O /tmp/rustscan.deb
-# sudo dpkg -i /tmp/rustscan.deb
-# sudo rm /tmp/rustscan.deb
 
 # install vscode
 sudo wget -O code-latest.deb 'https://code.visualstudio.com/sha/download?build=stable&os=linux-deb-x64'
@@ -164,8 +156,8 @@ ssh-keygen -t rsa -f ~/.ssh/id_rsa -P ""
 
 # burp config
 sudo mkdir /usr/local/lib/BurpSuite
-sudo wget https://repo1.maven.org/maven2/org/jruby/jruby-complete/9.4.0.0/jruby-complete-9.4.0.0.jar -O /usr/local/lib/BurpSuite/jruby-complete.jar
-sudo wget https://repo1.maven.org/maven2/org/python/jython-standalone/2.7.3/jython-standalone-2.7.3.jar -O /usr/local/lib/BurpSuite/jython-standalone.jar
+sudo wget https://repo1.maven.org/maven2/org/jruby/jruby-complete/9.4.9.0/jruby-complete-9.4.9.0.jar -O /usr/local/lib/BurpSuite/jruby-complete.jar
+sudo wget https://repo1.maven.org/maven2/org/python/jython-standalone/2.7.4/jython-standalone-2.7.4.jar -O /usr/local/lib/BurpSuite/jython-standalone.jar
 sudo chmod 0644 /usr/local/lib/BurpSuite/jruby-complete.jar
 sudo chmod 0644 /usr/local/lib/BurpSuite/jython-standalone.jar
 sudo cp -v $RPATH/UserConfigCommunity.json ~/.BurpSuite/UserConfigCommunity.json
@@ -214,6 +206,11 @@ xfconf-query -c xfce4-panel -p /plugins/plugin-11/grouping -t bool -s false --cr
 
 # copy files
 cp -v $RPATH/idorfuzz.txt /usr/share/seclists/idorfuzz.txt
+
+# zapret DPI bypass
+sudo wget https://github.com/bol-van/zapret/releases/download/v72.9/zapret-v72.9.zip
+sudo unzip zapret-v72.9.zip
+sudo mv zapret-v72.9 /opt/zapret
 
 # update locate db
 sudo updatedb

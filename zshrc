@@ -99,8 +99,6 @@ smbAddresstun="\\\\\\${tunip}\\share"
 smbAddresseth="\\\\\\${ethip}\\share" 
 # Example aliases
 alias ls='lsd'
-alias vi='nvim'
-alias vim='nvim'
 alias myip="echo;ip -c a | grep -w 'inet' | cut -d'/' -f1;echo"
 alias pysrv="sudo python3 -m http.server"
 alias ll="ls -la"
