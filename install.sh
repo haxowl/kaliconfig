@@ -121,6 +121,10 @@ sudo chmod 777 /opt/misc/chisel_1.11.3_linux_amd64
 sudo wget https://download.sysinternals.com/files/SysinternalsSuite.zip -O /opt/SysinternalsSuite.zip
 sudo unzip /opt/SysinternalsSuite.zip -d /opt/SysinternalsSuite
 sudo rm /opt/SysinternalsSuite.zip
+sudo wget https://cdn.sanity.io/files/r09655ln/production/c3f3789f35a16bbf88fa6a656a2cdab2369c3b3c.zip -O /opt/pingcastle.zip
+sudo unzip /opt/pingcastle.zip -d /opt/pingcastle
+sudo rm /opt/pingcastle.zip
+sudo wget https://raw.githubusercontent.com/jakehildreth/Locksmith/refs/heads/main/Invoke-Locksmith.ps1 -O /opt/misc/Invoke-Locksmith.ps1
 
 sudo wget https://github.com/ropnop/kerbrute/releases/download/v1.0.3/kerbrute_linux_amd64 -O /opt/misc/kerbrute
 sudo chmod 777 /opt/misc/kerbrute
