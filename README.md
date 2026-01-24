@@ -1,5 +1,5 @@
 ### This is my personal config, nothing fancy and far from perfect but it works for me and it might work for you too. 
-### Tested on Kali 2025.2
+### Tested on Kali 2025.4 running on VMWare Workstation 17.x
 
 Credits: thegoodhackertv ippsec pimpmykali blacklanternsecurity
 
@@ -50,3 +50,4 @@ sudo nmcli con up 'Wired connection 1'
 JS Link Finder
 backlash powered scanner
 http request smuggler
+activescan ++

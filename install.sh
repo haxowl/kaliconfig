@@ -47,7 +47,11 @@ sudo apt upgrade -y
 sudo apt remove -y python3-httpx
 
 # install packages 
-sudo apt install -y python3 python3-pip feh scrot scrub xclip xsel fastfetch wmname acpi imagemagick python3-pip lsd bpython open-vm-tools-desktop open-vm-tools pipx git python3-argcomplete netexec bat bloodhound gowitness eaphammer seclists bettercap jq kitty rlwrap font-manager cyberchef gobuster nuclei neovim golang subfinder docker.io docker-compose bloodyad certipy-ad feroxbuster oscanner redis-tools sipvicious tnscmd10g libpcap-dev sshpass sliver nishang ssh-audit dnsx airgeddon wifiphiser
+sudo apt install -y python3 python3-pip feh scrot scrub xclip xsel fastfetch wmname acpi imagemagick python3-pip lsd bpython open-vm-tools-desktop open-vm-tools pipx git python3-argcomplete  
+sleep 10
+sudo apt install -y netexec bat bloodhound gowitness eaphammer seclists bettercap jq kitty rlwrap font-manager cyberchef gobuster nuclei neovim golang subfinder
+sleep 10
+sudo apt install -y docker.io docker-compose bloodyad certipy-ad feroxbuster oscanner redis-tools sipvicious tnscmd10g libpcap-dev sshpass sliver nishang ssh-audit dnsx airgeddon wifiphiser
 
 # install ohmyzsh
 rm -rf ~/.oh-my-zsh
@@ -100,7 +104,7 @@ sudo wget https://github.com/peass-ng/PEASS-ng/releases/latest/download/linpeas.
 sudo wget https://github.com/peass-ng/PEASS-ng/releases/latest/download/winPEAS.bat -O /opt/misc/winPEAS.bat
 sudo wget https://github.com/peass-ng/PEASS-ng/releases/latest/download/winPEASany.exe -O /opt/misc/winPEASany.exe
 sudo wget https://github.com/peass-ng/PEASS-ng/releases/latest/download/winPEASx64.exe -O /opt/misc/winPEASx64.exe
-sudo wget https://raw.githubusercontent.com/itm4n/PrivescCheck/refs/heads/master/PrivescCheck.ps1 -O /opt/misc/PrivescCheck.ps1
+sudo wget https://github.com/itm4n/PrivescCheck/releases/latest/download/PrivescCheck.ps1 -O /opt/misc/PrivescCheck.ps1
 sudo wget https://github.com/DominicBreuker/pspy/releases/download/v1.2.1/pspy32 -O /opt/misc/pspy32
 sudo wget https://github.com/DominicBreuker/pspy/releases/download/v1.2.1/pspy32 -O /opt/misc/pspy64
 sudo wget https://raw.githubusercontent.com/gladiatx0r/Powerless/refs/heads/master/Powerless.bat -O /opt/misc/Powerless.bat
@@ -129,9 +133,9 @@ sudo chmod 777 /opt/misc/kerbrute
 pipx install git+https://github.com/Tib3rius/AutoRecon.git
 
 # installing PCredz
-sudo pip3 install Cython --break-system-packages
-sudo pip3 install python-libpcap --break-system-packages
-sudo git clone https://github.com/lgandx/PCredz /opt/PCredz
+# sudo pip3 install Cython --break-system-packages
+# sudo pip3 install python-libpcap --break-system-packages
+# sudo git clone https://github.com/lgandx/PCredz /opt/PCredz
 
 # install vscode
 sudo wget -O code-latest.deb 'https://code.visualstudio.com/sha/download?build=stable&os=linux-deb-x64'
@@ -147,9 +151,9 @@ sudo git clone https://github.com/coffinxp/loxs.git /opt/loxs
 sudo pip3 install -r /opt/loxs/requirements.txt --break-system-packages
 
 # install httpx project discovery
-go install -v github.com/projectdiscovery/httpx/cmd/httpx@latest
-echo export PATH=$PATH:$HOME/go/bin >> $HOME/.zshrc
-source $HOME/.zshrc
+# go install -v github.com/projectdiscovery/httpx/cmd/httpx@latest
+# echo export PATH=$PATH:$HOME/go/bin >> $HOME/.zshrc
+# source $HOME/.zshrc
 
 # generate ssh keys
 ssh-keygen -t rsa -f ~/.ssh/id_rsa -P ""
