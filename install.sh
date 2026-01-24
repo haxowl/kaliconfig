@@ -45,13 +45,13 @@ xfconf-query -c xfce4-power-manager -p /xfce4-power-manager/show-tray-icon -s tr
 
 # update and upgrade all
 sudo apt update -y
-sudo NEEDRESTART_MODE=a apt upgrade -y
+sudo DEBIAN_FRONTEND=noninteractive apt upgrade -y
 
 # uninstall unnecessary packages
 sudo apt remove -y python3-httpx
 
 # install packages 
-sudo NEEDRESTART_MODE=a apt install -y python3 python3-pip feh scrot scrub xclip xsel fastfetch wmname acpi imagemagick python3-pip lsd bpython open-vm-tools-desktop open-vm-tools pipx git python3-argcomplete netexec bat bloodhound gowitness eaphammer seclists bettercap jq kitty rlwrap font-manager cyberchef gobuster nuclei neovim golang subfinder docker.io docker-compose bloodyad certipy-ad feroxbuster oscanner redis-tools sipvicious tnscmd10g libpcap-dev sshpass sliver nishang ssh-audit dnsx airgeddon wifiphiser
+sudo DEBIAN_FRONTEND=noninteractive apt install -y python3 python3-pip feh scrot scrub xclip xsel fastfetch wmname acpi imagemagick python3-pip lsd bpython open-vm-tools-desktop open-vm-tools pipx git python3-argcomplete netexec bat bloodhound gowitness eaphammer seclists bettercap jq kitty rlwrap font-manager cyberchef gobuster nuclei neovim golang subfinder docker.io docker-compose bloodyad certipy-ad feroxbuster oscanner redis-tools sipvicious tnscmd10g libpcap-dev sshpass sliver nishang ssh-audit dnsx airgeddon wifiphisher
 
 # install ohmyzsh
 rm -rf ~/.oh-my-zsh
@@ -172,6 +172,8 @@ curl http://localhost:8080/cert -o /tmp/cacert.der
 sudo cp -v /tmp/cacert.der /usr/local/share/ca-certificates/BurpSuiteCA.der
 sudo chmod 0644 /usr/local/share/ca-certificates/BurpSuiteCA.der
 sudo rm /tmp/cacert.der
+
+#might need fix
 sudo cp -v $RPATH/UserConfigCommunity.json ~/.BurpSuite/UserConfigCommunity.json
 
 # install mozilla extensions and certificates
