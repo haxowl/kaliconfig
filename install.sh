@@ -47,11 +47,7 @@ sudo apt upgrade -y
 sudo apt remove -y python3-httpx
 
 # install packages 
-sudo apt install -y python3 python3-pip feh scrot scrub xclip xsel fastfetch wmname acpi imagemagick python3-pip lsd bpython open-vm-tools-desktop open-vm-tools pipx git python3-argcomplete  
-sleep 10
-sudo apt install -y netexec bat bloodhound gowitness eaphammer seclists bettercap jq kitty rlwrap font-manager cyberchef gobuster nuclei neovim golang subfinder
-sleep 10
-sudo apt install -y docker.io docker-compose bloodyad certipy-ad feroxbuster oscanner redis-tools sipvicious tnscmd10g libpcap-dev sshpass sliver nishang ssh-audit dnsx airgeddon wifiphiser
+sudo apt install -y python3 python3-pip feh scrot scrub xclip xsel fastfetch wmname acpi imagemagick python3-pip lsd bpython open-vm-tools-desktop open-vm-tools pipx git python3-argcomplete netexec bat bloodhound gowitness eaphammer seclists bettercap jq kitty rlwrap font-manager cyberchef gobuster nuclei neovim golang subfinder docker.io docker-compose bloodyad certipy-ad feroxbuster oscanner redis-tools sipvicious tnscmd10g libpcap-dev sshpass sliver nishang ssh-audit dnsx airgeddon wifiphiser
 
 # install ohmyzsh
 rm -rf ~/.oh-my-zsh
@@ -209,7 +205,7 @@ xfconf-query -c xfce4-panel -p /plugins/plugin-11/show-labels -t bool -s true --
 xfconf-query -c xfce4-panel -p /plugins/plugin-11/grouping -t bool -s false --create
 
 # copy files
-cp -v $RPATH/idorfuzz.txt /usr/share/seclists/idorfuzz.txt
+sudo cp -v $RPATH/idorfuzz.txt /usr/share/seclists/idorfuzz.txt
 
 # zapret DPI bypass
 sudo wget https://github.com/bol-van/zapret/releases/download/v72.9/zapret-v72.9.zip
