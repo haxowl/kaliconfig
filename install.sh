@@ -164,7 +164,6 @@ sudo wget https://repo1.maven.org/maven2/org/jruby/jruby-complete/9.4.9.0/jruby-
 sudo wget https://repo1.maven.org/maven2/org/python/jython-standalone/2.7.4/jython-standalone-2.7.4.jar -O /usr/local/lib/BurpSuite/jython-standalone.jar
 sudo chmod 0644 /usr/local/lib/BurpSuite/jruby-complete.jar
 sudo chmod 0644 /usr/local/lib/BurpSuite/jython-standalone.jar
-sudo cp -v $RPATH/UserConfigCommunity.json ~/.BurpSuite/UserConfigCommunity.json
 
 # generate burp cert, might need to increase timeout and sleep if using a low spec computer
 /bin/bash -c "timeout 45 /usr/lib/jvm/java-21-openjdk-amd64/bin/java -Djava.awt.headless=true -jar /usr/share/burpsuite/burpsuite.jar < <(echo y) &" 
@@ -173,6 +172,7 @@ curl http://localhost:8080/cert -o /tmp/cacert.der
 sudo cp -v /tmp/cacert.der /usr/local/share/ca-certificates/BurpSuiteCA.der
 sudo chmod 0644 /usr/local/share/ca-certificates/BurpSuiteCA.der
 sudo rm /tmp/cacert.der
+sudo cp -v $RPATH/UserConfigCommunity.json ~/.BurpSuite/UserConfigCommunity.json
 
 # install mozilla extensions and certificates
 sudo cp -v $RPATH/policies.json /usr/share/firefox-esr/distribution/policies.json
