@@ -39,15 +39,19 @@ fi
 
 RPATH=`pwd`
 
+# Disabling Auto-lock, Sleep, Screensaver
+xfconf-query -c xfce4-power-manager -p /xfce4-power-manager/presentation-mode -s true --create --type bool
+xfconf-query -c xfce4-power-manager -p /xfce4-power-manager/show-tray-icon -s true --create --type bool
+
 # update and upgrade all
 sudo apt update -y
-sudo apt upgrade -y
+sudo NEEDRESTART_MODE=a apt upgrade -y
 
 # uninstall unnecessary packages
 sudo apt remove -y python3-httpx
 
 # install packages 
-sudo apt install -y python3 python3-pip feh scrot scrub xclip xsel fastfetch wmname acpi imagemagick python3-pip lsd bpython open-vm-tools-desktop open-vm-tools pipx git python3-argcomplete netexec bat bloodhound gowitness eaphammer seclists bettercap jq kitty rlwrap font-manager cyberchef gobuster nuclei neovim golang subfinder docker.io docker-compose bloodyad certipy-ad feroxbuster oscanner redis-tools sipvicious tnscmd10g libpcap-dev sshpass sliver nishang ssh-audit dnsx airgeddon wifiphiser
+sudo NEEDRESTART_MODE=a apt install -y python3 python3-pip feh scrot scrub xclip xsel fastfetch wmname acpi imagemagick python3-pip lsd bpython open-vm-tools-desktop open-vm-tools pipx git python3-argcomplete netexec bat bloodhound gowitness eaphammer seclists bettercap jq kitty rlwrap font-manager cyberchef gobuster nuclei neovim golang subfinder docker.io docker-compose bloodyad certipy-ad feroxbuster oscanner redis-tools sipvicious tnscmd10g libpcap-dev sshpass sliver nishang ssh-audit dnsx airgeddon wifiphiser
 
 # install ohmyzsh
 rm -rf ~/.oh-my-zsh
@@ -83,10 +87,6 @@ sudo font-manager -i /tmp/fonts/*.ttf
 
 # initialize MSFDB
 sudo msfdb init
-
-# Disabling Auto-lock, Sleep, Screensaver
-xfconf-query -c xfce4-power-manager -p /xfce4-power-manager/presentation-mode -s true --create --type bool
-xfconf-query -c xfce4-power-manager -p /xfce4-power-manager/show-tray-icon -s true --create --type bool
 
 # Autohide taskbar
 # xfconf-query -c xfce4-panel -p /panels/panel-1/autohide-behavior -s 2 --create --type int
