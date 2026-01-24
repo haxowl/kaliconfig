@@ -221,6 +221,9 @@ sudo mv zapret-v72.9 /opt/zapret
 # update locate db
 sudo updatedb
 
+#fix postgres mismatch
+sudo runuser -u postgres -- psql -c 'ALTER DATABASE postgres REFRESH COLLATION VERSION; ALTER DATABASE template1 REFRESH COLLATION VERSION;'
+
 # Clean files
 sudo rm -rf ~/github
 sudo rm -rf $RPATH
