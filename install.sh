@@ -51,7 +51,7 @@ sudo DEBIAN_FRONTEND=noninteractive apt upgrade -y
 sudo apt remove -y python3-httpx
 
 # install packages 
-sudo DEBIAN_FRONTEND=noninteractive apt install -y python3 python3-pip feh scrot scrub xclip xsel fastfetch wmname acpi imagemagick python3-pip lsd bpython open-vm-tools-desktop open-vm-tools pipx git python3-argcomplete netexec bat bloodhound gowitness eaphammer seclists bettercap jq kitty rlwrap font-manager cyberchef gobuster nuclei neovim golang subfinder docker.io docker-compose bloodyad certipy-ad feroxbuster oscanner redis-tools sipvicious tnscmd10g libpcap-dev sshpass sliver nishang ssh-audit dnsx airgeddon wifiphisher
+sudo DEBIAN_FRONTEND=noninteractive apt install -y python3 python3-pip feh scrot scrub xclip xsel fastfetch wmname acpi imagemagick python3-pip lsd bpython open-vm-tools-desktop open-vm-tools pipx git python3-argcomplete netexec bat bloodhound gowitness eaphammer seclists bettercap jq kitty rlwrap font-manager cyberchef gobuster nuclei neovim golang subfinder docker.io docker-compose bloodyad certipy-ad feroxbuster oscanner redis-tools sipvicious tnscmd10g libpcap-dev sshpass sliver nishang ssh-audit dnsx airgeddon wifiphisher autorecon coercer openfortivpn libpcap-dev
 
 # install ohmyzsh
 rm -rf ~/.oh-my-zsh
@@ -129,8 +129,8 @@ sudo wget https://raw.githubusercontent.com/jakehildreth/Locksmith/refs/heads/ma
 sudo wget https://github.com/ropnop/kerbrute/releases/download/v1.0.3/kerbrute_linux_amd64 -O /opt/misc/kerbrute
 sudo chmod 777 /opt/misc/kerbrute
 
-# installing autorecon
-pipx install git+https://github.com/Tib3rius/AutoRecon.git
+# installing nabuu
+go install -v github.com/projectdiscovery/naabu/v2/cmd/naabu@latest
 
 # installing PCredz
 # sudo pip3 install Cython --break-system-packages
