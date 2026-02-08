@@ -94,6 +94,9 @@ sudo msfdb init
 # installing sharpcollection
 sudo git clone https://github.com/Flangvik/SharpCollection /opt/sharpcollection
 
+# installing krbrelayx
+sudo git clone https://github.com/dirkjanm/krbrelayx /opt/krbrelayx
+
 # installing binaries and scripts, PEAS
 sudo mkdir /opt/misc
 sudo wget https://github.com/peass-ng/PEASS-ng/releases/latest/download/linpeas.sh -O /opt/misc/linpeas.sh
