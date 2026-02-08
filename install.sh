@@ -111,11 +111,14 @@ sudo wget https://github.com/ohpe/juicy-potato/releases/download/v0.1/JuicyPotat
 sudo wget https://raw.githubusercontent.com/topotam/PetitPotam/refs/heads/main/PetitPotam.py -O /opt/misc/PetitPotam.py
 sudo wget https://github.com/topotam/PetitPotam/raw/refs/heads/main/PetitPotam.exe -O /opt/misc/PetitPotam.exe
 sudo wget https://raw.githubusercontent.com/maaaaz/nmaptocsv/refs/heads/master/nmaptocsv.py -O /opt/misc/nmaptocsv.py
+sudo wget https://github.com/BeichenDream/GodPotato/releases/download/V1.20/GodPotato-NET4.exe -O /opt/misc/GodPotato-NET4.exe
+sudo wget https://github.com/BeichenDream/GodPotato/releases/download/V1.20/GodPotato-NET35.exe -O /opt/misc/GodPotato-NET35.exe
+sudo wget https://github.com/BeichenDream/GodPotato/releases/download/V1.20/GodPotato-NET2.exe -O /opt/misc/GodPotato-NET2.exe
 
 sudo wget https://github.com/jpillora/chisel/releases/download/v1.11.3/chisel_1.11.3_linux_amd64.gz -O /opt/misc/chisel_1.11.3_linux_amd64.gz
-sudo wget https://github.com/jpillora/chisel/releases/download/v1.10.1/chisel_1.10.1_windows_amd64.gz -O /opt/misc/chisel_1.10.1_windows_amd64.gz
+sudo wget https://github.com/jpillora/chisel/releases/download/v1.11.3/chisel_1.11.3_windows_amd64.gz -O /opt/misc/chisel_1.11.3_windows_amd64.gz
 sudo gunzip /opt/misc/chisel_1.11.3_linux_amd64.gz
-sudo gunzip /opt/misc/chisel_1.10.1_windows_amd64.gz
+sudo gunzip /opt/misc/chisel_1.11.3_windows_amd64.gz
 sudo chmod 777 /opt/misc/chisel_1.11.3_linux_amd64
 
 sudo wget https://download.sysinternals.com/files/SysinternalsSuite.zip -O /opt/SysinternalsSuite.zip
