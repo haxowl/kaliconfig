@@ -120,6 +120,7 @@ sudo wget https://github.com/jpillora/chisel/releases/download/v1.11.3/chisel_1.
 sudo gunzip /opt/misc/chisel_1.11.3_linux_amd64.gz
 sudo gunzip /opt/misc/chisel_1.11.3_windows_amd64.gz
 sudo chmod 777 /opt/misc/chisel_1.11.3_linux_amd64
+sudo mv /opt/misc/chisel_1.11.3_windows_amd64 /opt/misc/chisel.exe
 
 sudo wget https://download.sysinternals.com/files/SysinternalsSuite.zip -O /opt/SysinternalsSuite.zip
 sudo unzip /opt/SysinternalsSuite.zip -d /opt/SysinternalsSuite
