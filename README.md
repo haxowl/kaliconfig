@@ -12,6 +12,9 @@ chmod 777 install.sh
 ./install.sh
 ```
 
+## **More info here**
+https://www.haxowl.com/blog/kaliconfig
+
 ## **Additional Config**
 **Bloodhound Community Edition**
 - Using the terminal
