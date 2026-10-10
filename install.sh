@@ -51,7 +51,7 @@ sudo DEBIAN_FRONTEND=noninteractive apt upgrade -y
 sudo apt remove -y python3-httpx
 
 # install packages 
-sudo DEBIAN_FRONTEND=noninteractive apt install -y python3 python3-pip feh scrot scrub xclip xsel fastfetch wmname acpi imagemagick python3-pip lsd bpython open-vm-tools-desktop open-vm-tools pipx git python3-argcomplete netexec bat bloodhound gowitness eaphammer seclists bettercap jq kitty rlwrap font-manager cyberchef gobuster nuclei neovim golang subfinder docker.io docker-compose bloodyad certipy-ad feroxbuster oscanner redis-tools sipvicious tnscmd10g libpcap-dev sshpass sliver nishang ssh-audit dnsx airgeddon wifiphisher autorecon coercer openfortivpn libpcap-dev
+sudo DEBIAN_FRONTEND=noninteractive apt install -y python3 python3-pip feh scrot scrub xclip xsel fastfetch wmname acpi imagemagick python3-pip lsd bpython open-vm-tools-desktop open-vm-tools pipx git python3-argcomplete netexec bat bloodhound gowitness eaphammer seclists bettercap jq kitty rlwrap font-manager cyberchef gobuster nuclei neovim golang subfinder docker.io docker-compose bloodyad certipy-ad feroxbuster oscanner redis-tools sipvicious tnscmd10g libpcap-dev sshpass sliver nishang ssh-audit dnsx airgeddon wifiphisher autorecon coercer openfortivpn libpcap-dev glow evolution
 
 # install ohmyzsh
 rm -rf ~/.oh-my-zsh
@@ -136,6 +136,11 @@ sudo wget https://raw.githubusercontent.com/jakehildreth/Locksmith/refs/heads/ma
 sudo wget https://github.com/ropnop/kerbrute/releases/download/v1.0.3/kerbrute_linux_amd64 -O /opt/misc/kerbrute
 sudo chmod 777 /opt/misc/kerbrute
 
+sudo wget https://github.com/AlessandroZ/LaZagne/releases/latest/download/LaZagne.exe -O /opt/misc/LaZagne.exe
+sudo wget https://github.com/Group3r/Group3r/releases/latest/download/Group3r.exe -O /opt/misc/Group3r.exe
+
+sudo git clone https://github.com/techspence/ADeleginator /opt/misc/ADeleginator
+
 # installing nabuu
 go install -v github.com/projectdiscovery/naabu/v2/cmd/naabu@latest
 
@@ -156,6 +161,19 @@ sudo nuclei
 # install loxs
 sudo git clone https://github.com/coffinxp/loxs.git /opt/loxs
 sudo pip3 install -r /opt/loxs/requirements.txt --break-system-packages
+
+# install wordlists
+#sudo wget https://hashmob.net/api/v2/downloads/research/official/hashmob.net_2026-10-04.medium.found.7z -O /opt/wordlists/hashmob.net_2026-10-04.medium.found.7z
+#sudo wget https://hashmob.net/api/v2/downloads/research/official/hashmob.net_2026-10-04.larger.found.7z -O /opt/wordlists/hashmob.net_2026-10-04.larger.found.7z
+#sudo git clone https://github.com/hackingyseguridad/diccionarios /opt/wordlists/diccionarios
+#sudo git clone https://github.com/CSL-LABS/CrackingWordLists /opt/wordlists/CrackingWordLists
+#sudo wget https://raw.githubusercontent.com/stealthsploit/OneRuleToRuleThemStill/refs/heads/main/OneRuleToRuleThemStill.rule -O /opt/wordlists/OneRuleToRuleThemStill.rule
+#sudo wget https://gist.github.com/The-Viper-One/a1ee60d8b3607807cc387d794e809f0b/raw/b7d83af6a8bbb43013e04f78328687d19d0cf9a7/kerberoast_pws.xz -O /opt/wordlists/kerberoast_pws.xz
+## https://github.com/six2dez/OneListForAll
+## https://hashmob.net/hashlists/info/4169
+
+# install roadrecon
+sudo pip install roadrecon
 
 # install httpx project discovery
 # go install -v github.com/projectdiscovery/httpx/cmd/httpx@latest
