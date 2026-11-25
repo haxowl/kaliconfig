@@ -118,19 +118,19 @@ sudo wget https://github.com/BeichenDream/GodPotato/releases/download/V1.20/GodP
 sudo wget https://github.com/BeichenDream/GodPotato/releases/download/V1.20/GodPotato-NET35.exe -O /opt/misc/GodPotato-NET35.exe
 sudo wget https://github.com/BeichenDream/GodPotato/releases/download/V1.20/GodPotato-NET2.exe -O /opt/misc/GodPotato-NET2.exe
 
-sudo wget https://github.com/jpillora/chisel/releases/download/v1.11.3/chisel_1.11.3_linux_amd64.gz -O /opt/misc/chisel_1.11.3_linux_amd64.gz
-sudo wget https://github.com/jpillora/chisel/releases/download/v1.11.3/chisel_1.11.3_windows_amd64.gz -O /opt/misc/chisel_1.11.3_windows_amd64.gz
-sudo gunzip /opt/misc/chisel_1.11.3_linux_amd64.gz
-sudo gunzip /opt/misc/chisel_1.11.3_windows_amd64.gz
-sudo chmod 777 /opt/misc/chisel_1.11.3_linux_amd64
-sudo mv /opt/misc/chisel_1.11.3_windows_amd64 /opt/misc/chisel.exe
+sudo wget https://github.com/jpillora/chisel/releases/download/v1.13.0/chisel_1.13.0_linux_amd64.gz -O /opt/misc/chisel_1.13.0_linux_amd64.gz
+sudo wget https://github.com/jpillora/chisel/releases/download/v1.13.0/chisel_1.13.0_windows_amd64.zip -O /opt/misc/chisel_1.13.0_windows_amd64.zip
+sudo gunzip /opt/misc/chisel_1.13.0_linux_amd64.gz
+sudo unzip /opt/misc/chisel_1.13.0_windows_amd64.zip -d /opt/misc/
+sudo chmod 777 /opt/misc/chisel_1.13.0_linux_amd64
+sudo mv /opt/misc/chisel_1.13.0_windows_amd64 /opt/misc/chisel.exe
 
 sudo wget https://download.sysinternals.com/files/SysinternalsSuite.zip -O /opt/SysinternalsSuite.zip
 sudo unzip /opt/SysinternalsSuite.zip -d /opt/SysinternalsSuite
 sudo rm /opt/SysinternalsSuite.zip
-sudo wget https://cdn.sanity.io/files/r09655ln/production/c3f3789f35a16bbf88fa6a656a2cdab2369c3b3c.zip -O /opt/pingcastle.zip
-sudo unzip /opt/pingcastle.zip -d /opt/pingcastle
-sudo rm /opt/pingcastle.zip
+# sudo wget https://cdn.sanity.io/files/r09655ln/production/c3f3789f35a16bbf88fa6a656a2cdab2369c3b3c.zip -O /opt/pingcastle.zip
+# sudo unzip /opt/pingcastle.zip -d /opt/pingcastle
+# sudo rm /opt/pingcastle.zip
 sudo wget https://raw.githubusercontent.com/jakehildreth/Locksmith/refs/heads/main/Invoke-Locksmith.ps1 -O /opt/misc/Invoke-Locksmith.ps1
 
 sudo wget https://github.com/ropnop/kerbrute/releases/download/v1.0.3/kerbrute_linux_amd64 -O /opt/misc/kerbrute
@@ -159,8 +159,8 @@ nuclei
 sudo nuclei
 
 # install loxs
-sudo git clone https://github.com/coffinxp/loxs.git /opt/loxs
-sudo pip3 install -r /opt/loxs/requirements.txt --break-system-packages
+# sudo git clone https://github.com/coffinxp/loxs.git /opt/loxs
+# sudo pip3 install -r /opt/loxs/requirements.txt --break-system-packages
 
 # install wordlists
 #sudo wget https://hashmob.net/api/v2/downloads/research/official/hashmob.net_2026-10-04.medium.found.7z -O /opt/wordlists/hashmob.net_2026-10-04.medium.found.7z
